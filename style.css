@@ -8,7 +8,7 @@ body {
   
   header {
     text-align: center;
-    background-color: #333333;
+    background-color: #bebebe; /* Updated to dark gray color */
     padding: 30px;
   }
   
@@ -25,7 +25,7 @@ body {
   }
   
   main {
-    max-width: 600px;
+    max-width: 800px; /* Updated to accommodate two columns */
     margin: 20px auto;
     padding: 0 20px;
   }
@@ -36,16 +36,44 @@ body {
   }
   
   ul {
-    list-style-type: none;
+    list-style-type: square; /* Updated to square bullet points */
+    padding-left: 20px; /* Added padding to align with the text */
+  }
+  
+  ul.core-competencies {
+    column-count: 2; /* Added column-count property for two columns */
+    column-gap: 20px; /* Added column-gap property to add some space between columns */
+  }
+  
+  ul.career-overview {
+    list-style-type: none; /* Remove default bullet points */
     padding: 0;
+  }
+  
+  ul.career-overview li {
+    position: relative;
+    padding-left: 25px;
+  }
+  
+  ul.career-overview li::before {
+    content: "\2713"; /* Unicode for checkmark symbol */
+    color: #747171; /* Dark gray color */
+    position: absolute;
+    left: 0;
+    top: 0;
   }
   
   li {
     margin-bottom: 5px;
   }
   
+  .emphasized {
+    font-weight: bold;
+    color: #007bff; /* Blue color for emphasis */
+  }
+  
   footer {
-    background-color: #f2f2f2;
+    background-color: #dbdada;
     text-align: center;
     padding: 20px;
     font-size: 14px;
